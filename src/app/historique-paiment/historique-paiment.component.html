@@ -1,0 +1,124 @@
+
+<html>
+    <div style="position: absolute; right: 10%; top: 70px;">
+        <img style="width: 5rem;" src="../../assets/images/info2.png" alt="">
+    </div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-1" style="position: absolute; top: 70px;">
+    <img src="../../assets/images/{{patient.image}}" style="width: 5rem; border-radius: 50%;">
+</div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-3" style="position: absolute; top: 70px;">
+    <form class="was-validated">
+
+        <div><label for=""><b>Nom :</b></label><input type="text" name="bb" placeholder="Nom de Patient" id=""
+                [(ngModel)]="patient.nom" class="form-control" required readonly></div>
+    </form>
+</div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-7" style="position: absolute; top: 70px;">
+    <form class="was-validated">
+        <div><label for=""><b>Prénom :</b></label><input type="text" name="cc" placeholder="Prenom de Patient" id=""
+                [(ngModel)]="patient.prenom" class="form-control" required readonly></div>
+
+    </form>
+
+</div>
+<div style="position: absolute; top: 5rem;">
+    <hr>
+</div>
+
+
+
+<div class="card-header" class="card text-center" style="position: absolute; left: 7rem;width: 80rem; top: 150px;">
+    <h1 class="text-white bg-success ">Paiement</h1>
+</div>
+
+
+
+<div style="position: absolute; top: 226px; right: 40rem; ">
+    <form class="was-validated">
+        <div><label for=""><b>Prix de Consultation :</b></label><input type="number" name="a"
+                placeholder="Prix_Consultation" id="" [(ngModel)]="patient.prixconsult" class="form-control" required>
+        </div>
+    </form>
+
+</div>
+<div style="position: absolute; top: 300px; right: 51rem; ">
+    <form class="was-validated">
+
+        <div>
+            <label for=""><b>Médicaments :</b></label>
+        </div>
+
+        <div *ngFor="let medication of medications">
+            <input class="form-check-input" type="checkbox" [id]="medication" [value]="medication"
+                [checked]="isSelected(medication)">
+            <label [for]="medication">{{medication}} </label>
+        </div>
+
+
+
+    </form>
+</div>
+
+<div style="position: absolute; top: 300px; right: 44rem; ">
+    <form>
+
+
+        <div><b>Prix :</b></div>
+        <div><input type="number" name="a" id="" [(ngModel)]="patient.prixSERUM" style="height: 20px; width: 5rem;">
+        </div>
+        <div><input type="number" name="b" id="" [(ngModel)]="patient.prixINJECTION" style="height: 20px; width: 5rem;">
+        </div>
+        <div><input type="number" name="ccc" id="" [(ngModel)]="patient.prixPANSEMENT" style="height: 20px; width: 5rem;">
+        </div>
+        
+
+    </form>
+</div>
+<div style="position: absolute; top: 300px; right: 38rem; ">
+    <form>
+
+
+        <div><b>Qntité :</b></div>
+        <div><input type="number" name="aa" id="" [(ngModel)]="patient.QtSERUM" style="height: 20px; width: 5rem;">
+        </div>
+        <div><input type="number" name="cc" id="" [(ngModel)]="patient.QtINJECTION" style="height: 20px; width: 5rem;">
+        </div>
+        <div><input type="number" name="bb" id="" [(ngModel)]="patient.QtPANSEMENT" style="height: 20px; width: 5rem;">
+        </div>
+        
+
+    </form>
+</div>
+
+
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-10" style="position: absolute; top: 17rem;">
+    <img style="width: 5rem;" class="btn btn-outline-success" src="../../assets/images/pa.png" alt=""
+        (click)="paiment()" (click)="update_paiment_Total()">
+    <!--<button type="reset" class="btn btn-outline-secondary" routerLink="/listeconsults">Annuler</button>
+</div>
+(click)="verefer_paiment((patient.id))"
+-->
+
+</div>
+
+
+<div style="position: absolute; top: 400px; right: 10rem; ">
+    <table class="table table-hover">
+        <thead>
+            <th>Prix_Totale</th>
+        </thead>
+        <tbody>
+
+
+            <td class="card text-white bg-success ">{{ patient.prixTotal }} DT 😊</td>
+
+        </tbody>
+    </table>
+
+</div>
+
+<img style="position: absolute; top: 500px; right: 10rem;width: 10rem; " src="../../assets/images/recue.png" alt=""
+    (click)="update()">
+
+
+</html>

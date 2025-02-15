@@ -1,0 +1,27 @@
+.container {
+    display: inline-block;
+}
+
+.text {
+    position: relative;
+    left: 32%;
+    border-right: 3px solid;
+    width: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(15),
+        cursor .4s step-end infinite alternate
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}

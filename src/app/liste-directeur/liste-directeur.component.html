@@ -1,0 +1,48 @@
+<app-header-directeur></app-header-directeur>
+<div class="container"  class="text-success">
+    <h1>
+        <p class="text">_{{title}}_</p>
+    </h1>
+
+</div>
+<input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search" style=" position: absolute;width: 12rem; right: 15rem;" >
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style=" position: absolute;right: 8rem;">Recherche</button>
+<a routerLink="/create_Directeur" style="position: relative; left: 1rem;" class="btn btn-outline-primary"><img style="width: 2rem;" src="../../assets/images/pn.png"> Ajouter Directeur</a>
+<br>
+<br>
+
+<div>
+    <table class="table table-hover">
+        <thead>
+
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Date Naissance</th>
+            <th>Sexe</th>
+            <th>Adresse</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+            <th>Date Recrutement</th>
+            <th>Mot de Passe</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let directeur of tdirecteur">
+                <td>{{ directeur.Nom }}</td>
+                <td>{{ directeur.Prenom }}</td>
+                <td>{{ directeur.datenaissance }}</td>
+                <td>{{ directeur.sexe }}</td>
+                <td>{{ directeur.adresse }}</td>
+                <td>{{directeur.email}}</td>
+                <td>{{ directeur.telephone }}</td>
+                <td>{{ directeur.dateRecrutement }}</td>
+                <td>{{ directeur.MotPasse }}</td>
+                <td><img style="width: 3rem;" class="btn btn-outline-success" src="../../assets/images/modife.png"
+                        alt="" (click)="edit(directeur.id)">--<img style="width: 3rem;" class="btn btn-outline-danger"
+                        src="../../assets/images/5305859.png" alt="" (click)="delete(directeur.id)"></td>
+
+
+            </tr>
+        </tbody>
+    </table>
+</div>

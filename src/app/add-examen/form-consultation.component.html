@@ -1,0 +1,81 @@
+<app-header></app-header> 
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-1" style="position: absolute; top: 90px;">
+       <img src="../../assets/images/{{patient.image}}"  style="width: 5rem; border-radius: 50%;">
+<hr style="width: 20%;">
+</div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-3" style="position: absolute; top: 90px;">
+        <form class="was-validated">
+
+                <div><label for=""><b>Nom :</b></label><input type="text" name="bb" placeholder="Nom de Patient" id=""
+      
+                        [(ngModel)]="patient.nom" class="form-control" required readonly></div>
+        <hr>
+                </form>
+</div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-7" style="position: absolute; top: 90px;">
+        <form class="was-validated">
+                <div><label for=""><b>Prénom :</b></label><input type="text" name="cc" placeholder="Prenom de Patient"
+                                id="" [(ngModel)]="patient.prenom" class="form-control" required readonly></div>       
+        <hr>
+                        </form>
+</div>
+
+
+<div style="position: relative; top: 5rem;">
+        
+</div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-1" style="position: absolute; top: 14rem;">
+        <form class="was-validated">
+                <div class="text-info"><img style="width: 5rem;" src="../../assets/images/" alt=""><b>Examen général 1 :
+                                </b></div>
+                <div><label for=""><b>Poids :</b></label><input type="number" name="a" placeholder="Poids de Patient"
+                                id="" [(ngModel)]="patient.Poids" class="form-control" required></div>
+                <div><label for=""><b>Taille :</b></label><input type="number" name="b" placeholder="Taille de Patient"
+                                id="" [(ngModel)]="patient.Taille" class="form-control" required></div>
+                <div><label for=""><b>Température :</b></label><input type="number" name="c"
+                                placeholder="Température de Patient" id="" [(ngModel)]="patient.Temperature"
+                                class="form-control" required></div>
+        </form>
+</div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-5" style="position: absolute; top: 14rem;">
+        <form class="was-validated">
+                <div class="text-info"><img style="width: 5rem;" src="../../assets/images/" alt=""><b>Examen général 2 :</b></div>
+                <div><label for=""><b>Fréquence cardiaque :</b></label><input type="text" name="g"
+                                placeholder="Fréquence cardiaque" id="" [(ngModel)]="patient.Frequencecardiaque"
+                                class="form-control" ></div>
+                <div><label for=""><b>Tension artérielle :</b></label><input type="text" name="h"
+                                placeholder="Tension artérielle" id="" [(ngModel)]="patient.Tensionarterielle"
+                                class="form-control" ></div>
+                <div><label for=""><b>Fréquence respiratoire :</b></label><input type="text" name="i"
+                                placeholder="Fréquence respiratoire" id="" [(ngModel)]="patient.Frequencerespiratoire"
+                                class="form-control" >
+                </div>
+
+                <div><label for=""><b>Antécédents médicaux :</b></label><textarea name="j" id=""
+                                placeholder="l'Antecedents" cols="20" rows="5" [(ngModel)]="patient.Antecedentsmedicaux"
+                                class="form-control" ></textarea>
+                </div>
+
+        </form>
+</div>
+<div class="col col-md-5 col-sm-5 col-sm-10 col-xl-2 offset-md-9" style="position: absolute; top: 14rem;">
+        <form class="was-validated">
+                <div class="text-success"><img style="width: 3rem;" src="../../assets/images/" alt=""><b>Description</b>
+                </div>
+
+                <div><label for=""><b>plaintes :</b></label><textarea name="j" id="" placeholder="l'plaintes" cols="20"
+                                rows="5" [(ngModel)]="patient.plaintes" class="form-control" required></textarea></div>
+
+                <div><label for=""><b>Symptômes :</b></label><textarea name="j" id="" placeholder="l'Symptômes"
+                                cols="20" rows="5" [(ngModel)]="patient.Symptomes" class="form-control"
+                                required></textarea></div>
+
+        </form>
+</div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-7" style="position: absolute; top: 40rem;">
+        <div><input type="submit" value="Enregistrer"  (click)="ajouter_examen_medical()" (click)="ajouter_salle_doctor()" (click)="delete_patient_salle_exam(patient.id)"
+                        class="btn btn-outline-primary">-----
+                <button type="reset" class="btn btn-outline-secondary" routerLink="/salle">Annuler</button>
+        </div>
+
+</div>

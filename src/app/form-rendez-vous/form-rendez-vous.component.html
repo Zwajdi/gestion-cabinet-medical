@@ -1,0 +1,79 @@
+
+<div style="position: relative; left: 28rem;">
+    <form class="was-validated">
+        <div class="text-success"><img style="width: 5rem;" src="../../assets/images/info2.png" alt=""><b>Informations
+                Patient</b></div>
+        <div><b> Nom Complet :</b></div>
+        <div style="width: 15rem;"><label for="">Prénom :</label><input type="text" name="b" placeholder="Prénom" id=""
+                [(ngModel)]="patient.prenom" class="form-control" required></div>
+        <div style="position: absolute; top: 105px; left: 300px;"><label for="">Nom de famille:</label><input
+                type="text" name="c" placeholder="Nom de famille" id="" [(ngModel)]="patient.nom" class="form-control"
+                required></div>
+        <div style="width: 15rem;"><label for=""><b>Date Naissance :</b></label><input type="date" name="d"
+                placeholder="Date de Patient" id="" [(ngModel)]="patient.datenaissance" class="form-control" required>
+        </div>
+        <div style="position: absolute; top: 165px; left: 300px;"><label for=""><b>Age :</b></label><input type="number"
+                name="e" placeholder="L'Age de Patient" id="" [(ngModel)]="patient.age" class="form-control" required>
+        </div>
+        <div style="width: 530px;">
+            <label for="sexeType"><b>Sexe :</b></label>
+            <select [(ngModel)]="patient.sexe" name="sexeType" class="form-control" required>
+                <option value="" disabled selected><b>Sélectionnez le type de Sexe</b></option>
+                <option value="Masculin"><b>Masculin</b></option>
+                <option value="Féminin"><b>Féminin</b></option>
+            </select>
+            
+        </div>
+
+        <div style="width: 530px;">
+            <label for="sexeType"><b>Situation Familiale :</b></label>
+            <select [(ngModel)]="patient.situationFamilial" name="stitationFType" class="form-control">
+                <option value="" disabled selected><b>Sélectionnez les Situation Familiale</b></option>
+                <option value="célibataire"><b>célibataire</b></option>
+                <option value="marié"><b>marié</b></option>
+                <option value="séparé "><b>séparé</b></option>
+            </select>
+            <div class="invalid-feedback"><b>Sélectionnez les type des Situation Familiale !!!</b></div>
+        </div>
+
+
+        <div style="width: 530px;"><label for=""><b>Profession :</b></label><input type="text" name="f"
+                placeholder="Profession de Patient" id="" [(ngModel)]="patient.profession" class="form-control"></div>
+
+        <br>
+
+
+
+        <div class="text-warning"><img style="width: 3rem;" src="../../assets/images/corrd.png" alt=""><b>Coordonnées
+                Patient</b></div>
+        <br>
+        <div style="width: 15rem;"><label for=""><b>Numéro de Téléphone :</b></label><input type="number" name="h"
+                placeholder="Numéro" id="" [(ngModel)]="patient.telephone" class="form-control" required></div>
+        <div style="position: absolute; top: 508px; left: 300px;"><label for=""><b>E-mail :</b></label><input
+                type="email" name="g" placeholder="nom@exemple.com" id="" [(ngModel)]="patient.email"
+                class="form-control" required></div>
+        <div style="width: 530px;"><label for=""><b>Adresse :</b></label><input type="text" name="i"
+                placeholder="L'Adresse de Patient" id="" [(ngModel)]="patient.adresse" class="form-control" required>
+        </div>
+        <br>
+        <div class="text-info"><img style="width: 3rem;" src="../../assets/images/Antecedents.png"
+                alt=""><b>Informations
+                Rendez-vous</b></div>
+        <br>
+        <div style="width: 15rem;"><label for=""><b>Date Arrivé :</b></label><input type="date" name="ai"
+                placeholder="Date Arrivé" id="" [(ngModel)]="patient.datearrive" class="form-control" required></div>
+        <div style="position: absolute; top: 730px; left: 300px; width: 15rem;"><label for=""><b>Heure D'Arrivé
+                    :</b></label><input type="time" name="au" placeholder="Heure D'Arrivé" id=""
+                [(ngModel)]="patient.heurearrive" class="form-control" required></div>
+        <br>
+        <div style="position: relative; width: 550px;"><label for=""><b>Information Complémentaire / Notes
+                    :</b></label><textarea name="ko" id="" placeholder="Saisire l'Notes" cols="65" rows="3"
+                [(ngModel)]="patient.note" class="form-control" required></textarea>
+        </div>
+        <br>
+        <div><input type="submit" value="Enregistrer" (click)="ajouter()" class="btn btn-outline-primary">
+        </div>
+    </form>
+
+
+</div>

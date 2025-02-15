@@ -1,0 +1,116 @@
+<app-header></app-header>
+<div style="position: absolute; right: 0%; top: 90px;">
+        <img src="../../assets/images/{{patient.image}}" style="width: 5rem; border-radius: 50%;">
+</div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-1" style="position: absolute; top: 70px;">
+        <form class="was-validated">
+                <div class="text-success"><img style="width: 5rem;" src="../../assets/images/info2.png"
+                                alt=""><b>Informations
+                                Patient</b></div>
+                <div><label for=""><b>N° Dossier :</b></label><input type="number" name="aa" placeholder="N° Dossier"
+                                [(ngModel)]="patient.numdossier" class="form-control" required></div>
+                <div><label for=""><b>Nom :</b></label><input type="text" name="bb" placeholder="Nom de Patient" id=""
+                                [(ngModel)]="patient.nom" class="form-control" required>
+                </div>
+                <div><label for=""><b>Prénom :</b></label><input type="text" name="cc" placeholder="Prenom de Patient"
+                                id="" [(ngModel)]="patient.prenom" class="form-control" required></div>
+                <div><label for=""><b>Date Naissance :</b></label><input type="date" name="dd"
+                                placeholder="Date de Patient" id="" [(ngModel)]="patient.datenaissance"
+                                class="form-control" required></div>
+                <div><label for=""><b>Age :</b></label><input type="number" name="ee" placeholder="L'Age de Patient"
+                                id="" [(ngModel)]="patient.age" class="form-control" required></div>
+                <div>
+                        <label for="sexeType"><b>Type de Sexe :</b></label>
+                        <select [(ngModel)]="patient.sexe" name="ff" class="form-control" required>
+                                <option value="" disabled selected><b>Sélectionnez le type de Sexe</b></option>
+                                <option value="Masculin"><b>Masculin</b></option>
+                                <option value="Féminin"><b>Féminin</b></option>
+                        </select>
+                        <div class="invalid-feedback"><b>Sélectionnez le type de Sexe !!!</b></div>
+                </div>
+
+                <div>
+                        <label for="sexeType"><b>Type de Situation Familiale :</b></label>
+                        <select [(ngModel)]="patient.situationFamilial" name="gg" class="form-control" required>
+                                <option value="" disabled selected><b>Sélectionnez les Situation Familiale</b></option>
+                                <option value="célibataire"><b>célibataire</b></option>
+                                <option value="marié"><b>marié</b></option>
+                                <option value="séparé "><b>séparé</b></option>
+                        </select>
+                        <div class="invalid-feedback"><b>Sélectionnez les type des Situation Familiale !!!</b></div>
+                </div>
+
+
+                <div><label for=""><b>Profession :</b></label><input type="text" name="kk"
+                                placeholder="Profession de Patient" id="" [(ngModel)]="patient.profession"
+                                class="form-control" required></div>
+        </form>
+</div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-5" style="position: absolute; top: 70px;">
+        <form class="was-validated">
+                <div class="text-info"><img style="width: 4rem;" src="../../assets/images/corrd.png"
+                                alt=""><b>Coordonnées
+                                Patient</b></div>
+                <div><label for=""><b>Email :</b></label><input type="email" name="ll" placeholder="l'Email de Patient"
+                                id="" [(ngModel)]="patient.email" class="form-control" required></div>
+                <div><label for=""><b>Téléphone :</b></label><input type="number" name="hh"
+                                placeholder="L'Téléphone de Patient" id="" [(ngModel)]="patient.telephone"
+                                class="form-control" required></div>
+                <div><label for=""><b>Adresse :</b></label><input type="text" name="ii"
+                                placeholder="L'Adresse de Patient" id="" [(ngModel)]="patient.adresse"
+                                class="form-control" required></div>
+
+        </form>
+</div>
+<div class="col col-md-5 col-sm-5 col-sm-10 col-xl-2 offset-md-9" style="position: absolute; top: 70px;">
+        <form class="was-validated">
+                <div class="text-success"><img style="width: 3rem;" src="../../assets/images/Antecedents.png"
+                                alt=""><b>Antecedents</b>
+                </div>
+                <div><label for=""><b>Antecedents :</b></label><textarea name="jj" id=""
+                                placeholder="Saisire l'Antecedents" cols="20" rows="5" [(ngModel)]="patient.antecedents"
+                                class="form-control" required></textarea></div>
+
+
+                <div><label for=""><b>Notes :</b></label><textarea name="ko" id="" placeholder="Saisire l'Notes"
+                                cols="20" rows="5" [(ngModel)]="patient.note" class="form-control" required></textarea>
+                </div>
+
+        </form>
+</div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-5" style="position: absolute; top: 23rem;">
+        <form class="was-validated">
+                <div class="text-success"><img style="width: 4rem;" src="../../assets/images/1 (1).png"
+                                alt=""><b>Informations
+                                Plus</b>
+                </div>
+                <div><label for=""><b>Numéro :</b></label><input type="number" name="ap"
+                                placeholder="le Numéro de patient" id="" [(ngModel)]="patient.numero"
+                                class="form-control" required></div>
+                <div><label for=""><b>Date Arrivé :</b></label><input type="date" name="ai" placeholder="Date Arrivé"
+                                id="" [(ngModel)]="patient.datearrive" class="form-control" required></div>
+                <div><label for=""><b>Heure D'Arrivé :</b></label><input type="time" name="au"
+                                placeholder="Heure D'Arrivé" id="" [(ngModel)]="patient.heurearrive"
+                                class="form-control" required></div>
+
+                <div>
+                        <label for="sexeType"><b>Etat Maladie :</b></label>
+                        <select [(ngModel)]="patient.etatmaladie" name="stitationFType" class="form-control" required>
+                                <option value="" disabled selected><b>Sélectionnez les Etat Maladie de Patient</b>
+                                </option>
+                                <option value="Normal"><b>Normal</b></option>
+                                <option value="Urgent"><b>Urgent</b></option>
+                                <!--<option value="Grave "><b>Grave</b></option>-->
+                        </select>
+                        <div class="invalid-feedback"><b>Sélectionnez les Etat Maladie de Patient !!!</b></div>
+                </div>
+
+        </form>
+</div>
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-9" style="position: absolute; top: 37rem;">
+        <div><input type="submit" value="Ajouter à la Salle d'Examen " class="btn btn-outline-primary"
+                        (click)="ajouter_salle()" (click)="delete(patient.id)">-----
+                <button type="reset" class="btn btn-outline-secondary" routerLink="/liste">Annuler</button>
+        </div>
+
+</div>

@@ -1,0 +1,52 @@
+<app-header-directeur></app-header-directeur>
+<div class="container"  class="text-success">
+    <h1>
+        <p class="text">_{{title}}_</p>
+    </h1>
+
+</div>
+<input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search"
+    style=" position: absolute;width: 12rem; right: 15rem;">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+    style=" position: absolute;right: 8rem;">Recherche</button>
+<a routerLink="/create_Doctor" style="position: relative; left: 1rem;" class="btn btn-outline-primary"><img style="width: 2rem;" src="../../assets/images/pn.png"> Ajouter Médecin</a>
+<br>
+<br>
+
+<div class="">
+    <table class="table table-hover">
+        <thead>
+
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>D-Naissance</th>
+            <th>Sexe</th>
+            <th>Adresse</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+            <th>Specialite</th>
+            <th>D-Recrutement</th>
+            <th>Mot de Passe</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let doctor of tdoctor">
+                <td>{{ doctor.Nom }}</td>
+                <td>{{ doctor.Prenom }}</td>
+                <td>{{ doctor.datenaissance }}</td>
+                <td>{{ doctor.sexe }}</td>
+                <td>{{ doctor.adresse }}</td>
+                <td>{{doctor.email}}</td>
+                <td>{{ doctor.telephone }}</td>
+                <td>{{ doctor.Specialite }}</td>
+                <td>{{ doctor.dateRecrutement }}</td>
+                <td style="width: 30rem;">{{ doctor.MotPasse }}</td>
+                <td><img style="width: 3rem;" class="btn btn-outline-success" src="../../assets/images/modife.png"
+                        alt="" (click)="edit(doctor.id)">--<img style="width: 3rem;" class="btn btn-outline-danger"
+                        src="../../assets/images/5305859.png" alt="" (click)="delete(doctor.id)"></td>
+
+
+            </tr>
+        </tbody>
+    </table>
+</div>

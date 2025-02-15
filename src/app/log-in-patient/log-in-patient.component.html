@@ -1,0 +1,35 @@
+<img style="position: absolute;width: 15%; left: 50rem;top: 3rem;" src="../../assets/images/imj1jpg" alt="">
+
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-4" style="position: absolute; top: 70px;">
+    <form class="was-validated">
+        <div class="text-success">
+            <img style="width: 5rem;" src="../../assets/images/pat1.png" alt="">
+            <b>Log in Patient</b>
+        </div>
+       
+        <hr>
+
+        <div>
+            <label for="email"><b>Email :</b></label>
+            <input type="email" name="e" placeholder="Email " id="email" [(ngModel)]="email" class="form-control"
+                required>
+        </div>
+
+        <div>
+            <label for="motPasse"><b>Mot de Passe :</b></label>
+            <input type="password" name="f" placeholder="Mot de Passe" id="motPasse" [(ngModel)]="motPasse"
+                class="form-control" required>
+        </div>
+        <br>
+
+        <div>
+            Nouveau sur ce site ?
+            <a href="create_Patient" >S'inscrire</a>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Se Connecter" (click)="Entre()" class="btn btn-outline-primary">---<button
+                type="reset" class="btn btn-outline-secondary" routerLink="/premaire">Annuler</button>
+        </div>
+    </form>
+</div>

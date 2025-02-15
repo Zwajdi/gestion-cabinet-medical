@@ -1,0 +1,50 @@
+<app-header-patient></app-header-patient>
+<div class="container"  class="text-success">
+    <h1>
+        <p class="text">_{{title}}_</p>
+    </h1>
+
+</div>
+<input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search" style=" position: absolute;width: 12rem; right: 15rem;" >
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style=" position: absolute;right: 8rem;">Recherche</button>
+<br>
+<br>
+
+<div class="col col-md-10 offset-md-1">
+    <table class="table table-hover">
+        <thead>
+            <th></th>
+            <th>Etat Maladie</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Sexe</th>
+            <th>Situation Familiale</th>
+            <th>Date Naissance</th>
+            <th>Age</th>
+            <th>Date Arrivé</th>
+            <th>Heure D'Arrivé</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let patient of tpatient">
+                <td><img src="../../assets/images/{{patient.image}}"  alt="..."
+                    style="width: 5rem; border-radius: 50%;"></td>
+                <td><br><span *ngIf="patient.etatmaladie === 'Normal' " class="text-success">Normal</span>
+                    <span *ngIf="patient.etatmaladie === 'Urgent' " class="text-danger">Urgent</span>
+                </td>
+                <td><br>{{ patient.nom }}</td>
+                <td><br>{{ patient.prenom }}</td>
+                <td><br>{{ patient.sexe }}</td>
+                <td><br>{{ patient.situationFamilial}}</td>
+                <td><br>{{ patient.datenaissance }}</td>
+                <td><br>{{ patient.age }}</td>
+                <td><br>{{ patient.datearrive }}</td>
+                <td><br>{{ patient.heurearrive }}</td>
+                <td><br><img style="width: 3rem;" class="btn btn-outline-info" src="../../assets/images/1.png" alt=""
+                    (click)="addconsult(patient.id)"></td>
+
+
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,230 @@
+<app-header-doctor></app-header-doctor>
+
+<div style="position: absolute; right: 3rem;top: 5rem;"><input type="submit" value="Enregistrer" (click)="ajouter_Certificat()" class="btn btn-outline-primary">---
+    <button type="reset" class="btn btn-outline-secondary" routerLink="/salle_consultation">Annuler</button>
+</div>
+
+
+<div class="card bg-light mb-3" style="left: 20rem; max-width: 50rem; top: 5rem ;">
+    <div class="card-header text-white bg-primary mb-3" style="position: relative;">
+        <h1 style="position: relative; left: 13rem;">_Certificat Medical_</h1>
+    </div>
+    <img src="../../assets/images/cert.png" style=" position: absolute;right: 1rem;top: 5rem;" alt="" width="80rem">
+
+    <div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-4" style="position: relative;">
+        <form class="was-validated">
+
+
+
+
+
+
+            <div style="position: absolute;left: -15rem;top: 1rem;"><label for=""><b> Le :</b></label>
+                <input type="date" name="apx" placeholder="le Date de certificat" id=""
+                    [(ngModel)]="patient.dateCertificate" class="form-control" required>
+            </div>
+
+            <div style="position: absolute;left: -15rem;top: 5rem;"><label for=""><b>Fait à :</b></label>
+
+                <input type="text" name="apw" placeholder="Cabine Medical" id="" [(ngModel)]="patient.nomCabine"
+                    class="form-control" required>
+            </div>
+
+            <div style="position: absolute;left: -15rem;top: 9rem;"><label for=""><b>Téléphone :</b></label>
+
+                <input type="number" name="apwt" placeholder="Téléphone" id="" [(ngModel)]="patient.numCabine"
+                    class="form-control" required>
+            </div>
+
+            <div style="position: absolute;right: -20rem;top: 6rem;"><label for=""><b>Valable pour une durée
+                        maximale</b></label>
+                <input type="text" name="ap" placeholder="la durée maximale" id=""
+                    [(ngModel)]="patient.dureeValidite" class="form-control" required>
+            </div>
+
+
+
+
+
+
+
+        </form>
+    </div>
+
+
+
+
+    <div class="col col-md-6 col-sm-6 col-sm-12 col-xl-4 offset-md-4" style="position: relative;top: 13rem;">
+        <form class="was-validated">
+
+
+
+
+            <div><label for=""><b>Je soussigné docteur :</b></label>
+                <input type="text" name="nnn" placeholder="le Nom de Docteur" id="" [(ngModel)]="patient.nomDoctor"
+                    class="form-control" required><input type="text" name="ap" placeholder="le Prénom de Docteur  "
+                    id="" [(ngModel)]="patient.prenomDoctor" class="form-control" required>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div><label for=""><b> Certifie avoir examiné M. Mme :</b></label>
+                <input type="text" name="bcb" placeholder="Nom de Patient" id="" [(ngModel)]="patient.nom"
+                    class="form-control" required> <input type="text" name="cc" placeholder="Prénom de Patient" id=""
+                    [(ngModel)]="patient.prenom" class="form-control" required>
+
+
+            </div>
+
+            <div><label for=""><b> Né(e) le :</b></label>
+
+                <input type="date" name="bb" id="" [(ngModel)]="patient.datenaissance" class="form-control" required>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div style="  position: relative;top: 500rem;">
+
+                ..
+            </div>
+            <div style=" position: relative;top: 600rem;">
+
+                ..
+            </div>
+            <div style=" position: relative;top: 500rem;">
+
+                ..
+            </div>
+            <div style=" position: relative;top: 500rem;">
+
+                ..
+            </div>
+            <div style=" position: relative;top: 500rem;">
+
+                ..
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ..
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+
+                ..
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ..
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ..
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+
+                ..
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ..
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+
+                ..
+            </div>
+
+            <div style=" position: relative;top: 500rem;">
+                ...
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ...
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ...
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ...
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ...
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ...
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ...
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ...
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ...
+
+            </div>
+            <div style=" position: relative;top: 500rem;">
+                ...
+
+            </div>
+            <div style=" position: relative;top: 50rem;">
+                ...
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+    </div>
+    <form class="was-validated">
+        <div style="position: absolute; top: 36rem; left: 3rem;"><label for=""><b> Sujet :</b></label>
+            <textarea name="j" id="" placeholder="le Sujet de Certificat" cols="87" rows="5"
+                [(ngModel)]="patient.sujetcertificat" class="form-control" required></textarea>
+        </div>
+
+        <div style="position: absolute; top: 50rem; right: 1rem;">
+            CACHET & SIGNATURE<br>
+            <img src="../../assets/images/cache.jpg" style="position: relative;right: -3rem;" width="100rem" alt="">
+
+        </div>
+    </form>
+</div>

@@ -1,0 +1,51 @@
+<img style="position: absolute;width: 15%; left: 50rem;top: 3rem;" src="../../assets/images/imj1jpg" alt="">
+<div class="col col-md-6 col-sm-6 col-sm-12 col-xl-3 offset-md-4" style="position: absolute;left: 5rem; top: 70px;">
+        <form class="was-validated">
+                <div class="text-success"><img style="width: 5rem;" src="../../assets/images/30.png"
+                                alt=""><b>Informations
+                                Doctor</b></div>
+                <hr>
+                <div><label for=""><b>Nom :</b></label><input type="text" name="b" placeholder="Nom" id=""
+                                [(ngModel)]="doctor.Nom" class="form-control" required></div>
+                <div><label for=""><b>Prénom :</b></label><input type="text" name="c" placeholder="Prénom" id=""
+                                [(ngModel)]="doctor.Prenom" class="form-control" required></div>
+                <div><label for=""><b>Date Naissance :</b></label><input type="date" name="d"
+                                placeholder="Date de Patient" id="" [(ngModel)]="doctor.datenaissance"
+                                class="form-control" required></div>
+                <div><label for=""><b>Adresse :</b></label><input type="text" name="adres" placeholder="Adresse" id=""
+                                [(ngModel)]="doctor.adresse" class="form-control" required></div>
+                <div><label for=""><b>Email d'entre :</b></label><input type="email" name="e" placeholder="l'Email"
+                                id="" [(ngModel)]="doctor.email" class="form-control" required></div>
+
+
+                <div><label for=""><b>Téléphone :</b></label><input type="number" name="rrr" placeholder="l'Téléphone"
+                                id="" [(ngModel)]="doctor.telephone" class="form-control" required></div>
+                <div>
+                        <label for="sexeType"><b>Sexe :</b></label>
+                        <select [(ngModel)]="doctor.sexe" name="sexeType" class="form-control" required>
+                                <option value="" disabled selected><b>Sélectionnez le type de Sexe</b></option>
+                                <option value="Masculin"><b>Masculin</b></option>
+                                <option value="Féminin"><b>Féminin</b></option>
+                        </select>
+                        <div class="invalid-feedback"><b>Sélectionnez le type de Sexe !!!</b></div>
+                </div>
+                <div><label for=""><b>Date Recrutement :</b></label><input type="date" name="dateRecrutement"
+                                placeholder="Date Recrutement" id="" [(ngModel)]="doctor.dateRecrutement"
+                                class="form-control" required></div>
+                <div><label for=""><b>Spécialité :</b></label><input type="text" name="spesat" placeholder="Spécialité"
+                                id="" [(ngModel)]="doctor.Specialite" class="form-control" required></div>
+
+                <div><label for=""><b>Mot de Passe :</b></label><input type="password" name="f"
+                                placeholder="Profession de Patient" id="" [(ngModel)]="doctor.MotPasse"
+                                class="form-control" required>
+
+                </div>
+                <br>
+
+
+                <div><input type="submit" value="Enregistrer" (click)="ajouter()" class="btn btn-outline-primary">-----
+                        <button type="reset" class="btn btn-outline-secondary"
+                                routerLink="/liste_doctor">Annuler</button>
+                </div>
+        </form>
+</div>

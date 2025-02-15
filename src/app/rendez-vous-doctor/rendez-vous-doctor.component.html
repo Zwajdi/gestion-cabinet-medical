@@ -1,0 +1,46 @@
+<app-header-doctor></app-header-doctor>
+<div class="container"  class="text-success">
+    <h1>
+        <p class="text">_{{title}}_</p>
+    </h1>
+
+</div>
+<a routerLink="/form_Rendez" class="btn btn-outline-primary">Ajouter Rendez_vous</a>
+<br>
+<br>
+<br>
+<div>
+    <table class="table table-hover">
+        <thead>
+            <th></th>
+            <th>Date d'arrivé</th>
+            <th>Heure d'arrivé</th>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Age</th>
+            <th>Sexe</th>
+            <th>Télephone</th>
+            <th>Adresse</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let patient of tpatient">
+                <td><img src="../../assets/images/{{patient.image}}"  alt="..."
+                    style="width: 5rem; border-radius: 50%;" (click)="editimg(patient.id)"></td>
+                <td class="text-danger"><br>{{ patient.datearrive }}</td>
+                <td class="text-danger"><br>{{ patient.heurearrive }}</td>
+                <td><br>{{ patient.prenom }}</td>
+                <td><br>{{ patient.nom }}</td>
+                <td><br>{{ patient.age }}</td>
+                <td><br>{{ patient.sexe }}</td>
+                <td><br>{{patient.telephone}}</td>
+                <td><br>{{patient.adresse}}</td>
+                <td><br><img style="width: 3rem;" class="btn btn-outline-success" src="../../assets/images/modife.png" alt=""
+                    (click)="edit_rendez_vous(patient.id)">---<img style="width: 3rem;" class="btn btn-outline-danger" src="../../assets/images/5305859.png"
+                        alt="" (click)="delete(patient.id)"></td>
+
+
+            </tr>
+        </tbody>
+    </table>
+</div>
