@@ -31,16 +31,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 #  Installation de Node.js 
 Étape 1 : Téléchargement 
-• Rendez-vous sur le site officiel de Node.js : https://nodejs.org/en/ 
-• Téléchargez la version LTS recommandée pour Windows. 
+1. Rendez-vous sur le site officiel de Node.js : https://nodejs.org/en/ 
+2. Téléchargez la version LTS recommandée pour Windows. 
 Étape 2 : Installation 
-• Exécutez le fichier d'installation téléchargé. 
-• Suivez les instructions à l'écran pour installer Node.js. 
+1. Exécutez le fichier d'installation téléchargé. 
+2. Suivez les instructions à l'écran pour installer Node.js. 
 Étape 3 : Vérification de l'installation 
-• Ouvrez l'invite de commande (CMD). 
-Figure 15:Logo de 
-Node.js 
-• Tapez les commandes suivantes pour vérifier l'installation de Node.js et npm (le 
+1. Ouvrez l'invite de commande (CMD). 
+2. Tapez les commandes suivantes pour vérifier l'installation de Node.js et npm (le 
 gestionnaire de paquets de Node.js) : 
 node -v 
 npm -v
